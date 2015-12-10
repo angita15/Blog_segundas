@@ -1,0 +1,20 @@
+<% if @post.errors.any? %>
+<ul>
+	<% @post.errors.full_messages.each do |mensajes|%>
+	<li><%= mensajes%></li>
+	<% end %>
+</ul>
+<% end %>
+<%= form_for @post do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<br />
+<%= f.label :body %>
+<%= f.text_field :body %>
+<br />
+<%= f.label :autor %>
+<%= f.text_field :autor %>
+<br />
+<%= f.submit "Guardar"%>
+
+<% end %>

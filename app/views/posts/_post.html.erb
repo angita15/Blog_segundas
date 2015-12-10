@@ -1,0 +1,13 @@
+<tr>
+	<td><%=post.title %></td>
+	<td><%=post.body %></td>
+	<td><%=post.autor %></td>
+	<td><%=post.created_at.strftime("%d/%m/%y") %></td>
+	<td><%=post.updated_at.strftime("%d/%m/%y") %></td>
+
+
+
+
+	<td><%= link_to "Editar",edit_post_path(post) %> </td>
+	<td><%= link_to "Eliminar",post_path(post),data:{method: "DELETE"} %> </td>
+</tr>
